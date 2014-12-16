@@ -13,11 +13,11 @@ describe "price"  do
   it  "should invalid  if product price less then 0.01" do
     @productNew.price = 0
     #@productNew.invalid?.should be_true
-    expect(true).to @productNew.invalid?
+    expect(@productNew.invalid?).to  be_truthy
   end
   it  "should valid  if product price greater then 0.01" do
     @productNew.price = 1
     #@productNew.valid?.should be_true
-    expect(true).to @productNew.valid?
+    expect(@productNew.valid?).to  be_truthy
   end
 end
