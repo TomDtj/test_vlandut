@@ -1,0 +1,31 @@
+<h1>Listing product_news</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @product_news.each do |product_news| %>
+      <tr>
+        <td><%= product_news.title %></td>
+        <td><%= product_news.description %></td>
+        <td><%= product_news.image_url %></td>
+        <td><%= product_news.price %></td>
+        <td><%= link_to 'Show', product_news %></td>
+        <td><%= link_to 'Edit', edit_product_news_path(product_news) %></td>
+        <td><%= link_to 'Destroy', product_news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product new', new_product_news_path %>

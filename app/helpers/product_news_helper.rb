@@ -1,0 +1,2 @@
+module ProductNewsHelper
+end
